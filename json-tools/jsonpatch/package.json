@@ -1,0 +1,12 @@
+{
+  "name": "jsonpatch",
+  "version": "1.0.0",
+  "description": "JSON Patch CLI tool (RFC 6902)",
+  "type": "module",
+  "main": "jsonpatch.js",
+  "bin": {
+    "jsonpatch": "./jsonpatch.js"
+  },
+  "keywords": ["json", "patch", "rfc6902", "cli"],
+  "license": "ISC"
+}

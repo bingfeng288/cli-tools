@@ -1,0 +1,12 @@
+{
+  "name": "csvsum",
+  "version": "1.0.0",
+  "description": "CSV statistics and summary tool",
+  "type": "module",
+  "main": "csvsum.js",
+  "bin": {
+    "csvsum": "./csvsum.js"
+  },
+  "keywords": ["csv", "stats", "summary", "aggregate", "cli"],
+  "license": "ISC"
+}

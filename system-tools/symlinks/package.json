@@ -1,0 +1,12 @@
+{
+  "name": "symlinks",
+  "version": "1.0.0",
+  "description": "Symbolic link manager CLI",
+  "type": "module",
+  "main": "symlinks.js",
+  "bin": {
+    "symlinks": "./symlinks.js"
+  },
+  "keywords": ["symlink", "symbolic", "link", "cli"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "jsontree",
+  "version": "1.0.0",
+  "description": "JSON tree viewer CLI",
+  "type": "module",
+  "main": "jsontree.js",
+  "bin": {
+    "jsontree": "./jsontree.js"
+  },
+  "keywords": ["json", "tree", "viewer", "cli"],
+  "license": "ISC"
+}

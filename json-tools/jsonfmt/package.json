@@ -1,0 +1,15 @@
+{
+  "name": "jsonfmt",
+  "version": "1.0.0",
+  "description": "JSON formatter, validator, and transformer",
+  "type": "module",
+  "main": "jsonfmt.js",
+  "bin": {
+    "jsonfmt": "./jsonfmt.js"
+  },
+  "scripts": {
+    "fmt": "node jsonfmt.js"
+  },
+  "keywords": ["json", "format", "validate", "transform"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "csvheader",
+  "version": "1.0.0",
+  "description": "CSV header management tool",
+  "type": "module",
+  "main": "csvheader.js",
+  "bin": {
+    "csvheader": "./csvheader.js"
+  },
+  "keywords": ["csv", "header", "columns", "cli"],
+  "license": "ISC"
+}

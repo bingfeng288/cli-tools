@@ -1,0 +1,12 @@
+{
+  "name": "jsondiff",
+  "version": "1.0.0",
+  "description": "JSON diff and comparison CLI tool",
+  "type": "module",
+  "main": "jsondiff.js",
+  "bin": {
+    "jsondiff": "./jsondiff.js"
+  },
+  "keywords": ["json", "diff", "compare", "cli"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "csvflatten",
+  "version": "1.0.0",
+  "description": "JSON to flat CSV converter",
+  "type": "module",
+  "main": "csvflatten.js",
+  "bin": {
+    "csvflatten": "./csvflatten.js"
+  },
+  "keywords": ["csv", "flatten", "json", "cli"],
+  "license": "ISC"
+}

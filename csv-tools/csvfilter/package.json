@@ -1,0 +1,12 @@
+{
+  "name": "csvfilter",
+  "version": "1.0.0",
+  "description": "CSV row filtering tool",
+  "type": "module",
+  "main": "csvfilter.js",
+  "bin": {
+    "csvfilter": "./csvfilter.js"
+  },
+  "keywords": ["csv", "filter", "query", "cli"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "csvmerge",
+  "version": "1.0.0",
+  "description": "CSV merge/join tool",
+  "type": "module",
+  "main": "csvmerge.js",
+  "bin": {
+    "csvmerge": "./csvmerge.js"
+  },
+  "keywords": ["csv", "merge", "join", "cli"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "diskusage",
+  "version": "1.0.0",
+  "description": "Disk usage analyzer CLI",
+  "type": "module",
+  "main": "diskusage.js",
+  "bin": {
+    "diskusage": "./diskusage.js"
+  },
+  "keywords": ["disk", "usage", "analyzer", "cli"],
+  "license": "ISC"
+}

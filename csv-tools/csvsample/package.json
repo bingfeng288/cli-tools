@@ -1,0 +1,12 @@
+{
+  "name": "csvsample",
+  "version": "1.0.0",
+  "description": "CSV row sampling tool",
+  "type": "module",
+  "main": "csvsample.js",
+  "bin": {
+    "csvsample": "./csvsample.js"
+  },
+  "keywords": ["csv", "sample", "random", "cli"],
+  "license": "ISC"
+}

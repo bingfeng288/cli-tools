@@ -1,0 +1,12 @@
+{
+  "name": "csvpivot",
+  "version": "1.0.0",
+  "description": "CSV pivot table tool",
+  "type": "module",
+  "main": "csvpivot.js",
+  "bin": {
+    "csvpivot": "./csvpivot.js"
+  },
+  "keywords": ["csv", "pivot", "crosstab", "cli"],
+  "license": "ISC"
+}

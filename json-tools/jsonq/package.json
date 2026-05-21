@@ -1,0 +1,12 @@
+{
+  "name": "jsonq",
+  "version": "1.0.0",
+  "description": "JSON query and exploration CLI tool",
+  "type": "module",
+  "main": "jsonq.js",
+  "bin": {
+    "jsonq": "./jsonq.js"
+  },
+  "keywords": ["json", "query", "jq", "filter", "cli"],
+  "license": "ISC"
+}

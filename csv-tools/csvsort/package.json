@@ -1,0 +1,12 @@
+{
+  "name": "csvsort",
+  "version": "1.0.0",
+  "description": "CSV sorting tool",
+  "type": "module",
+  "main": "csvsort.js",
+  "bin": {
+    "csvsort": "./csvsort.js"
+  },
+  "keywords": ["csv", "sort", "cli"],
+  "license": "ISC"
+}

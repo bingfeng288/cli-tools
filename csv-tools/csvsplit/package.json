@@ -1,0 +1,12 @@
+{
+  "name": "csvsplit",
+  "version": "1.0.0",
+  "description": "CSV file splitting tool",
+  "type": "module",
+  "main": "csvsplit.js",
+  "bin": {
+    "csvsplit": "./csvsplit.js"
+  },
+  "keywords": ["csv", "split", "chunk", "cli"],
+  "license": "ISC"
+}

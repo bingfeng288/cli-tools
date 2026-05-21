@@ -1,0 +1,12 @@
+{
+  "name": "csvstats",
+  "version": "1.0.0",
+  "description": "CSV column statistics tool",
+  "type": "module",
+  "main": "csvstats.js",
+  "bin": {
+    "csvstats": "./csvstats.js"
+  },
+  "keywords": ["csv", "stats", "statistics", "cli"],
+  "license": "ISC"
+}

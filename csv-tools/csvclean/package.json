@@ -1,0 +1,12 @@
+{
+  "name": "csvclean",
+  "version": "1.0.0",
+  "description": "CSV cleaning and normalization tool",
+  "type": "module",
+  "main": "csvclean.js",
+  "bin": {
+    "csvclean": "./csvclean.js"
+  },
+  "keywords": ["csv", "clean", "normalize", "cli"],
+  "license": "ISC"
+}

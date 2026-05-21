@@ -1,0 +1,12 @@
+{
+  "name": "hasher",
+  "version": "1.0.0",
+  "description": "Hash generator CLI utility",
+  "type": "module",
+  "main": "hasher.js",
+  "bin": {
+    "hasher": "./hasher.js"
+  },
+  "keywords": ["hash", "md5", "sha", "crypto", "cli"],
+  "license": "ISC"
+}

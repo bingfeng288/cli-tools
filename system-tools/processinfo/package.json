@@ -1,0 +1,12 @@
+{
+  "name": "processinfo",
+  "version": "1.0.0",
+  "description": "Process information CLI tool",
+  "type": "module",
+  "main": "processinfo.js",
+  "bin": {
+    "processinfo": "./processinfo.js"
+  },
+  "keywords": ["process", "info", "ps", "cli"],
+  "license": "ISC"
+}

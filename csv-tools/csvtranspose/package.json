@@ -1,0 +1,12 @@
+{
+  "name": "csvtranspose",
+  "version": "1.0.0",
+  "description": "CSV transpose tool",
+  "type": "module",
+  "main": "csvtranspose.js",
+  "bin": {
+    "csvtranspose": "./csvtranspose.js"
+  },
+  "keywords": ["csv", "transpose", "rotate", "cli"],
+  "license": "ISC"
+}
