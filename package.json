@@ -4,11 +4,7 @@
   "description": "A collection of lightweight, dependency-free CLI tools built with pure Node.js",
   "type": "module",
   "scripts": {
-    "install:all": "node install-all.js",
-    "install:csv": "cd csv-tools && for dir in */; do cd \"$dir\" && npm link && cd ..; done",
-    "install:json": "cd json-tools && for dir in */; do cd \"$dir\" && npm link && cd ..; done",
-    "install:encoding": "cd encoding-tools && for dir in */; do cd \"$dir\" && npm link && cd ..; done",
-    "install:system": "cd system-tools && for dir in */; do cd \"$dir\" && npm link && cd ..; done"
+    "install:all": "node install-all.js"
   },
   "keywords": ["cli", "tools", "csv", "json", "utilities"],
   "license": "ISC"
