@@ -83,6 +83,8 @@ function rsGeneratorPoly(nsym) {
     }
     gen = newGen;
   }
+  // Reverse to leading-coefficient-first ordering (matches Python's Polynomial convention)
+  gen.reverse();
   return gen;
 }
 
@@ -414,30 +416,32 @@ function placeFormatInfo(m, maskIdx) {
   const formatIdx = (0b01 << 3) | maskIdx;
   const formatBits = FORMAT_INFO[formatIdx];
 
-  // Place around top-left
-  const positions1 = [
-    [8, 0], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 7], [8, 8],
-    [7, 8], [5, 8], [4, 8], [3, 8], [2, 8], [1, 8], [0, 8],
-  ];
-
-  // Place around top-right and bottom-left
-  const positions2 = [
-    [8, size - 1], [8, size - 2], [8, size - 3], [8, size - 4], [8, size - 5], [8, size - 6], [8, size - 7], [8, size - 8],
-    [size - 7, 8], [size - 6, 8], [size - 5, 8], [size - 4, 8], [size - 3, 8], [size - 2, 8], [size - 1, 8],
-  ];
-
+  // Vertical: column 8 (covers both top-left and bottom-left areas)
   for (let i = 0; i < 15; i++) {
-    const bit = (formatBits >> (14 - i)) & 1;
-    const dark = bit === 1;
-
-    if (i < positions1.length) {
-      matrix[positions1[i][0]][positions1[i][1]] = dark;
-    }
-
-    if (i < positions2.length) {
-      matrix[positions2[i][0]][positions2[i][1]] = dark;
+    const bit = ((formatBits >> i) & 1) === 1;
+    if (i < 6) {
+      matrix[i][8] = bit;
+    } else if (i < 8) {
+      matrix[i + 1][8] = bit;
+    } else {
+      matrix[size - 15 + i][8] = bit;
     }
   }
+
+  // Horizontal: row 8 (covers both top-left and top-right areas)
+  for (let i = 0; i < 15; i++) {
+    const bit = ((formatBits >> i) & 1) === 1;
+    if (i < 8) {
+      matrix[8][size - 1 - i] = bit;
+    } else if (i < 9) {
+      matrix[8][15 - i - 1 + 1] = bit;
+    } else {
+      matrix[8][15 - i - 1] = bit;
+    }
+  }
+
+  // Dark module (already set in placeFunctionPatterns, but ensure it's set)
+  matrix[size - 8][8] = true;
 }
 
 // --- Calculate penalty score ---
