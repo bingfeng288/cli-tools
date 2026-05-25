@@ -1,0 +1,12 @@
+{
+  "name": "mdlinkcheck",
+  "version": "1.0.0",
+  "description": "Markdown link checker CLI",
+  "type": "module",
+  "main": "mdlinkcheck.js",
+  "bin": {
+    "mdlinkcheck": "./mdlinkcheck.js"
+  },
+  "keywords": ["markdown", "link", "checker", "validator"],
+  "license": "ISC"
+}

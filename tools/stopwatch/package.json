@@ -1,0 +1,12 @@
+{
+  "name": "stopwatch",
+  "version": "1.0.0",
+  "description": "CLI stopwatch and timer",
+  "type": "module",
+  "main": "stopwatch.js",
+  "bin": {
+    "stopwatch": "./stopwatch.js"
+  },
+  "keywords": ["stopwatch", "timer", "pomodoro", "cli"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "mdlint",
+  "version": "1.0.0",
+  "description": "Markdown linter CLI tool",
+  "type": "module",
+  "main": "mdlint.js",
+  "bin": {
+    "mdlint": "./mdlint.js"
+  },
+  "keywords": ["markdown", "linter", "lint", "cli"],
+  "license": "ISC"
+}

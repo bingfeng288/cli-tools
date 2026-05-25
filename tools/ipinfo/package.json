@@ -1,0 +1,12 @@
+{
+  "name": "ipinfo",
+  "version": "1.0.0",
+  "description": "IP address info CLI tool",
+  "type": "module",
+  "main": "ipinfo.js",
+  "bin": {
+    "ipinfo": "./ipinfo.js"
+  },
+  "keywords": ["ip", "address", "network", "subnet"],
+  "license": "ISC"
+}

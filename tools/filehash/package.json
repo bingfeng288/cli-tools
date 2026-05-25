@@ -1,0 +1,12 @@
+{
+  "name": "filehash",
+  "version": "1.0.0",
+  "description": "File hashing and checksum CLI tool",
+  "type": "module",
+  "main": "filehash.js",
+  "bin": {
+    "filehash": "./filehash.js"
+  },
+  "keywords": ["hash", "checksum", "md5", "sha256", "file"],
+  "license": "ISC"
+}

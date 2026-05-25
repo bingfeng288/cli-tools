@@ -1,0 +1,12 @@
+{
+  "name": "baseconv",
+  "version": "1.0.0",
+  "description": "Number base converter CLI",
+  "type": "module",
+  "main": "baseconv.js",
+  "bin": {
+    "baseconv": "./baseconv.js"
+  },
+  "keywords": ["base", "converter", "binary", "hex", "octal"],
+  "license": "ISC"
+}

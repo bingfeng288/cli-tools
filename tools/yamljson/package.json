@@ -1,0 +1,12 @@
+{
+  "name": "yamljson",
+  "version": "1.0.0",
+  "description": "YAML to JSON converter CLI",
+  "type": "module",
+  "main": "yamljson.js",
+  "bin": {
+    "yamljson": "./yamljson.js"
+  },
+  "keywords": ["yaml", "json", "converter", "cli"],
+  "license": "ISC"
+}

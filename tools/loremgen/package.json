@@ -1,0 +1,12 @@
+{
+  "name": "loremgen",
+  "version": "1.0.0",
+  "description": "Lorem Ipsum text generator CLI",
+  "type": "module",
+  "main": "loremgen.js",
+  "bin": {
+    "loremgen": "./loremgen.js"
+  },
+  "keywords": ["lorem", "ipsum", "text", "generator", "placeholder"],
+  "license": "ISC"
+}

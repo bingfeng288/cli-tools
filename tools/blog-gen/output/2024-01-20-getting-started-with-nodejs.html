@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getting Started with Node.js - My Blog</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Segoe UI', sans-serif; color: #333; background: #fff; line-height: 1.7; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  header { border-bottom: 1px solid #eee; padding: 20px 0; margin-bottom: 40px; }
+  header h1 { font-size: 24px; }
+  header h1 a { color: #333; text-decoration: none; }
+  header nav { margin-top: 8px; }
+  header nav a { color: #666; text-decoration: none; margin-right: 16px; font-size: 14px; }
+  header nav a:hover { color: #333; }
+  article { margin-bottom: 40px; }
+  article h1 { font-size: 28px; margin-bottom: 8px; }
+  article h1 a { color: #333; text-decoration: none; }
+  article h2 { font-size: 22px; margin: 24px 0 12px; }
+  article h3 { font-size: 18px; margin: 20px 0 8px; }
+  .meta { color: #888; font-size: 14px; margin-bottom: 20px; }
+  .meta .tag { background: #f0f0f0; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px; }
+  .excerpt { color: #666; margin-bottom: 12px; }
+  p { margin: 0 0 16px; }
+  a { color: #3b82f6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f5f5f5; border-radius: 6px; padding: 16px; overflow-x: auto; margin: 16px 0; }
+  pre code { background: none; padding: 0; }
+  blockquote { border-left: 4px solid #3b82f6; padding: 8px 16px; margin: 16px 0; background: #f9f9f9; }
+  ul, ol { padding-left: 24px; margin: 16px 0; }
+  li { margin: 4px 0; }
+  hr { border: none; border-top: 1px solid #eee; margin: 32px 0; }
+  img { max-width: 100%; border-radius: 6px; }
+  footer { border-top: 1px solid #eee; padding: 20px 0; margin-top: 40px; color: #888; font-size: 13px; }
+  .post-list { list-style: none; padding: 0; }
+  .post-list li { padding: 16px 0; border-bottom: 1px solid #eee; }
+  .post-list li:last-child { border-bottom: none; }
+  .post-list .post-title { font-size: 18px; font-weight: 600; }
+  .post-list .post-title a { color: #333; }
+  .post-list .post-date { color: #888; font-size: 13px; }
+  .post-list .post-desc { color: #666; font-size: 14px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1><a href="/">My Blog</a></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </header>
+  
+      <article>
+        <h1>Getting Started with Node.js</h1>
+        <div class="meta">
+          2024-01-20
+          <a class="tag" href="/tags.html#javascript">javascript</a><a class="tag" href="/tags.html#nodejs">nodejs</a><a class="tag" href="/tags.html#tutorial">tutorial</a>
+        </div>
+        
+<h1>Getting Started with Node.js</h1>
+
+<p>Node.js is a powerful JavaScript runtime built on Chrome's V8 engine.</p>
+
+<h2 id="Installation">Installation</h2>
+
+<p>Download and install Node.js from the official website:</p>
+
+<pre><code class="language-bash"># Check installation
+<p>node --version</p>
+<p>npm --version</p>
+<p></code></pre></p>
+
+<h2 id="Your First Application">Your First Application</h2>
+
+<p>Create a file called <code>app.js</code>:</p>
+
+<pre><code class="language-javascript">const http = require('http');
+
+<p>const server = http.createServer((req, res) =&gt; {</p>
+<p>  res.writeHead(200, { 'Content-Type': 'text/plain' });</p>
+<p>  res.end('Hello, World!\n');</p>
+<p>});</p>
+
+<p>server.listen(3000, () =&gt; {</p>
+<p>  console.log('Server running at http://localhost:3000/');</p>
+<p>});</p>
+<p></code></pre></p>
+
+<h2 id="Key Concepts">Key Concepts</h2>
+<ul>
+<li><strong>Modules</strong> - Organize your code into reusable pieces</li>
+<li><strong>npm</strong> - Package manager for JavaScript</li>
+<li><strong>Async/Await</strong> - Handle asynchronous operations elegantly</li>
+<p></ul></p>
+<h2 id="Next Steps">Next Steps</h2>
+<ul>
+<li>Learn about Express.js for web applications</li>
+<li>Explore database integration</li>
+<li>Build RESTful APIs</li>
+<p></ul></p>
+<p>Happy coding!</p>
+
+      </article>
+    
+  <footer>
+    <p>&copy; 2026 Author. Built with blog-gen.</p>
+  </footer>
+</div>
+
+</body>
+</html>

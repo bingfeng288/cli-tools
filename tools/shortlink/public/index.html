@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShortLink</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🔗 ShortLink</span>
+  </header>
+
+  <main class="main">
+    <!-- Create Form -->
+    <div class="create-section">
+      <h1>Shorten your links</h1>
+      <p class="subtitle">Create short, memorable links that redirect to your destination.</p>
+      <div class="create-form">
+        <div class="input-row">
+          <input type="url" id="urlInput" placeholder="https://example.com/very-long-url" />
+          <button class="btn btn-primary" id="shortenBtn">Shorten</button>
+        </div>
+        <div class="options-row">
+          <input type="text" id="aliasInput" placeholder="Custom alias (optional)" />
+          <input type="text" id="titleInput" placeholder="Title (optional)" />
+        </div>
+      </div>
+      <div class="result" id="result" style="display:none">
+        <div class="result-url" id="resultUrl"></div>
+        <button class="btn btn-ghost btn-sm" onclick="copyResult()">Copy</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value" id="statLinks">0</div>
+        <div class="stat-label">Total Links</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statClicks">0</div>
+        <div class="stat-label">Total Clicks</div>
+      </div>
+    </div>
+
+    <!-- Links List -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Your Links</h3>
+        <input type="text" id="searchLinks" placeholder="Search..." class="search-input" />
+      </div>
+      <div class="links-list" id="linksList"></div>
+    </div>
+
+    <!-- Top Links -->
+    <div class="card">
+      <h3>Top Links by Clicks</h3>
+      <div class="top-links" id="topLinks"></div>
+    </div>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

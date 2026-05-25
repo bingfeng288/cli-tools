@@ -1,0 +1,15 @@
+{
+  "name": "passgen",
+  "version": "1.0.0",
+  "description": "Secure password generator",
+  "type": "module",
+  "main": "passgen.js",
+  "bin": {
+    "passgen": "./passgen.js"
+  },
+  "scripts": {
+    "gen": "node passgen.js"
+  },
+  "keywords": ["password", "generator", "security"],
+  "license": "ISC"
+}

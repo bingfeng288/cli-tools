@@ -1,0 +1,22 @@
+{
+  "name": "markwiki",
+  "version": "1.0.0",
+  "description": "Local markdown wiki server",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "markwiki": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["markdown", "wiki", "notes", "documentation"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1",
+  "dependencies": {
+    "express": "^5.2.1",
+    "marked": "^18.0.3"
+  }
+}

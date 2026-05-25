@@ -1,0 +1,12 @@
+{
+  "name": "envview",
+  "version": "1.0.0",
+  "description": "Environment variable viewer CLI",
+  "type": "module",
+  "main": "envview.js",
+  "bin": {
+    "envview": "./envview.js"
+  },
+  "keywords": ["env", "environment", "variable", "viewer"],
+  "license": "ISC"
+}

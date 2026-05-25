@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mpajda4k50wyd9",
+    "type": "income",
+    "amount": 15000,
+    "category": "salary",
+    "description": "Monthly salary",
+    "date": "2026-05-01",
+    "createdAt": "2026-05-18T01:39:22.628Z"
+  },
+  {
+    "id": "mpajda4sri9l3g",
+    "type": "expense",
+    "amount": 3500,
+    "category": "food",
+    "description": "Groceries and dining",
+    "date": "2026-05-05",
+    "createdAt": "2026-05-18T01:39:22.636Z"
+  },
+  {
+    "id": "mpajda50yayhl6",
+    "type": "expense",
+    "amount": 1200,
+    "category": "transport",
+    "description": "Subway and taxi",
+    "date": "2026-05-08",
+    "createdAt": "2026-05-18T01:39:22.644Z"
+  },
+  {
+    "id": "mpajda56xd6r6l",
+    "type": "expense",
+    "amount": 800,
+    "category": "shopping",
+    "description": "New headphones",
+    "date": "2026-05-10",
+    "createdAt": "2026-05-18T01:39:22.650Z"
+  },
+  {
+    "id": "mpajda5d7dls2q",
+    "type": "expense",
+    "amount": 500,
+    "category": "entertainment",
+    "description": "Movie and games",
+    "date": "2026-05-12",
+    "createdAt": "2026-05-18T01:39:22.657Z"
+  },
+  {
+    "id": "mpajda5k2jm7oe",
+    "type": "income",
+    "amount": 3000,
+    "category": "freelance",
+    "description": "Side project payment",
+    "date": "2026-05-15",
+    "createdAt": "2026-05-18T01:39:22.664Z"
+  }
+]

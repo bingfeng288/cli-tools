@@ -1,0 +1,12 @@
+{
+  "name": "filewatch",
+  "version": "1.0.0",
+  "description": "File watcher CLI tool",
+  "type": "module",
+  "main": "filewatch.js",
+  "bin": {
+    "filewatch": "./filewatch.js"
+  },
+  "keywords": ["file", "watch", "monitor", "cli"],
+  "license": "ISC"
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Chen - Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; color: #222; line-height: 1.5; background: #fff; }
+  .container { max-width: 700px; margin: 60px auto; padding: 0 24px; }
+  h1 { font-size: 36px; font-weight: 300; letter-spacing: -1px; }
+  .subtitle { font-size: 16px; color: #888; margin-top: 4px; }
+  .contact { margin-top: 8px; font-size: 13px; color: #aaa; }
+  hr { border: none; border-top: 1px solid #eee; margin: 32px 0; }
+  .section { margin-bottom: 28px; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: #aaa; margin-bottom: 12px; }
+  .entry { margin-bottom: 14px; }
+  .entry-row { display: flex; justify-content: space-between; font-size: 14px; }
+  .entry-main { font-weight: 500; }
+  .entry-sub { color: #888; font-size: 13px; }
+  .entry-date { color: #aaa; font-size: 13px; }
+  ul { padding-left: 18px; font-size: 13px; color: #555; }
+  li { margin-bottom: 3px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .tag { font-size: 11px; color: #888; background: #f5f5f5; padding: 2px 8px; border-radius: 3px; }
+  @media print { .container { margin: 20px auto; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Alex Chen</h1>
+  <div class="subtitle">Senior Software Engineer</div>
+  <div class="contact">alex@example.com · +1 (555) 123-4567 · San Francisco, CA · https://alexchen.dev</div>
+  <hr>
+
+  <div class="section">
+    <h2>About</h2>
+    <p style="font-size:14px;color:#555">Passionate software engineer with 8+ years of experience building scalable web applications. Expert in TypeScript, React, and Node.js. Strong focus on code quality, performance, and developer experience.</p>
+  </div>
+
+  <div class="section">
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-row">
+        <span class="entry-main">Senior Software Engineer at TechCorp</span>
+        <span class="entry-date">2022 - Present</span>
+      </div>
+      <ul><li>Led the migration of a monolithic application to microservices, reducing deployment time by 70%</li><li>Designed and implemented a real-time data pipeline processing 1M+ events/day</li><li>Mentored 5 junior engineers and established code review best practices</li><li>Improved application performance by 40% through caching and query optimization</li></ul>
+    </div><div class="entry">
+      <div class="entry-row">
+        <span class="entry-main">Full Stack Developer at StartupXYZ</span>
+        <span class="entry-date">2019 - 2022</span>
+      </div>
+      <ul><li>Built the core product from scratch using React, Node.js, and PostgreSQL</li><li>Implemented CI/CD pipeline that reduced deployment failures by 90%</li><li>Developed a custom analytics dashboard used by 500+ customers</li><li>Scaled the application from 100 to 50,000 daily active users</li></ul>
+    </div><div class="entry">
+      <div class="entry-row">
+        <span class="entry-main">Frontend Developer at WebAgency</span>
+        <span class="entry-date">2017 - 2019</span>
+      </div>
+      <ul><li>Delivered 20+ client projects on time and within budget</li><li>Created a reusable component library used across 15 projects</li><li>Improved website performance scores from 40 to 95+ on Lighthouse</li></ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div style="margin-bottom:8px">
+      <span style="font-size:13px;font-weight:500">Languages:</span>
+      <span style="font-size:13px;color:#555">TypeScript · JavaScript · Python · Rust · Go</span>
+    </div><div style="margin-bottom:8px">
+      <span style="font-size:13px;font-weight:500">Frontend:</span>
+      <span style="font-size:13px;color:#555">React · Next.js · Vue.js · Tailwind CSS · HTML/CSS</span>
+    </div><div style="margin-bottom:8px">
+      <span style="font-size:13px;font-weight:500">Backend:</span>
+      <span style="font-size:13px;color:#555">Node.js · Express · FastAPI · PostgreSQL · Redis</span>
+    </div><div style="margin-bottom:8px">
+      <span style="font-size:13px;font-weight:500">DevOps:</span>
+      <span style="font-size:13px;color:#555">Docker · Kubernetes · AWS · GitHub Actions · Terraform</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-row">
+        <span class="entry-main">B.S. Computer Science — University of California, Berkeley</span>
+        <span class="entry-date">2013 - 2017</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <div class="entry">
+      <div style="font-weight:500;font-size:14px">DevFlow</div>
+      <div style="font-size:13px;color:#888">Open-source developer productivity tool with 2k+ GitHub stars</div>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Electron</span></div>
+    </div><div class="entry">
+      <div style="font-weight:500;font-size:14px">CloudSync</div>
+      <div style="font-size:13px;color:#888">Real-time file synchronization service for distributed teams</div>
+      <div class="tags"><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">Redis</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Certifications</h2>
+    <ul><li>AWS Solutions Architect Professional</li><li>Google Cloud Professional Developer</li><li>Kubernetes Administrator (CKA)</li></ul>
+  </div>
+</div>
+</body>
+</html>

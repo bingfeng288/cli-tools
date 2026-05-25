@@ -1,0 +1,12 @@
+{
+  "name": "uuidgen",
+  "version": "1.0.0",
+  "description": "UUID generator CLI tool",
+  "type": "module",
+  "main": "uuidgen.js",
+  "bin": {
+    "uuidgen": "./uuidgen.js"
+  },
+  "keywords": ["uuid", "generator", "cli", "unique"],
+  "license": "ISC"
+}

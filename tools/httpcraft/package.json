@@ -1,0 +1,12 @@
+{
+  "name": "httpcraft",
+  "version": "1.0.0",
+  "description": "A developer-friendly HTTP client CLI",
+  "type": "module",
+  "main": "httpcraft.js",
+  "bin": {
+    "httpcraft": "./httpcraft.js"
+  },
+  "keywords": ["http", "client", "curl", "api", "rest"],
+  "license": "ISC"
+}

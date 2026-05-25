@@ -1,0 +1,12 @@
+{
+  "name": "fakedata",
+  "version": "1.0.0",
+  "description": "Fake data generator CLI",
+  "type": "module",
+  "main": "fakedata.js",
+  "bin": {
+    "fakedata": "./fakedata.js"
+  },
+  "keywords": ["fake", "data", "generator", "mock", "test"],
+  "license": "ISC"
+}

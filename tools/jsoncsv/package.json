@@ -1,0 +1,12 @@
+{
+  "name": "jsoncsv",
+  "version": "1.0.0",
+  "description": "JSON to CSV converter CLI",
+  "type": "module",
+  "main": "jsoncsv.js",
+  "bin": {
+    "jsoncsv": "./jsoncsv.js"
+  },
+  "keywords": ["json", "csv", "converter", "cli"],
+  "license": "ISC"
+}

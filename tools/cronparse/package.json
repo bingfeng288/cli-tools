@@ -1,0 +1,12 @@
+{
+  "name": "cronparse",
+  "version": "1.0.0",
+  "description": "Cron expression parser and explorer CLI",
+  "type": "module",
+  "main": "cronparse.js",
+  "bin": {
+    "cronparse": "./cronparse.js"
+  },
+  "keywords": ["cron", "schedule", "parser", "expression"],
+  "license": "ISC"
+}

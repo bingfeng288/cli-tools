@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SysDash</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <span class="logo">📊 SysDash</span>
+      <span class="hostname" id="hostname"></span>
+    </div>
+    <div class="header-right">
+      <span class="uptime" id="uptime"></span>
+      <span class="refresh-indicator" id="refreshIndicator">● Live</span>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <!-- System Info -->
+    <div class="info-bar" id="systemInfo"></div>
+
+    <!-- Gauges Row -->
+    <div class="gauges-row">
+      <!-- CPU -->
+      <div class="card gauge-card">
+        <h3>CPU</h3>
+        <div class="gauge-container">
+          <canvas id="cpuGauge" width="200" height="200"></canvas>
+          <div class="gauge-value" id="cpuValue">0%</div>
+        </div>
+        <div class="gauge-details" id="cpuDetails"></div>
+      </div>
+
+      <!-- Memory -->
+      <div class="card gauge-card">
+        <h3>Memory</h3>
+        <div class="gauge-container">
+          <canvas id="memGauge" width="200" height="200"></canvas>
+          <div class="gauge-value" id="memValue">0%</div>
+        </div>
+        <div class="gauge-details" id="memDetails"></div>
+      </div>
+
+      <!-- Disk -->
+      <div class="card gauge-card">
+        <h3>Disk</h3>
+        <div class="gauge-container">
+          <canvas id="diskGauge" width="200" height="200"></canvas>
+          <div class="gauge-value" id="diskValue">0%</div>
+        </div>
+        <div class="gauge-details" id="diskDetails"></div>
+      </div>
+
+      <!-- Load Average -->
+      <div class="card gauge-card">
+        <h3>Load Average</h3>
+        <div class="load-averages">
+          <div class="load-item">
+            <div class="load-value" id="load1">0</div>
+            <div class="load-label">1 min</div>
+          </div>
+          <div class="load-item">
+            <div class="load-value" id="load5">0</div>
+            <div class="load-label">5 min</div>
+          </div>
+          <div class="load-item">
+            <div class="load-value" id="load15">0</div>
+            <div class="load-label">15 min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CPU Cores -->
+    <div class="card">
+      <h3>CPU Cores</h3>
+      <div class="cores-grid" id="coresGrid"></div>
+    </div>
+
+    <!-- Network -->
+    <div class="card">
+      <h3>Network Interfaces</h3>
+      <div class="network-list" id="networkList"></div>
+    </div>
+
+    <!-- Processes -->
+    <div class="card">
+      <h3>Top Processes</h3>
+      <table class="process-table" id="processTable">
+        <thead>
+          <tr>
+            <th>PID</th>
+            <th>User</th>
+            <th>CPU%</th>
+            <th>MEM%</th>
+            <th>Command</th>
+          </tr>
+        </thead>
+        <tbody id="processBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

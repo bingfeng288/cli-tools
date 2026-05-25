@@ -1,0 +1,12 @@
+{
+  "name": "passcheck",
+  "version": "1.0.0",
+  "description": "Password strength checker CLI",
+  "type": "module",
+  "main": "passcheck.js",
+  "bin": {
+    "passcheck": "./passcheck.js"
+  },
+  "keywords": ["password", "strength", "checker", "security"],
+  "license": "ISC"
+}

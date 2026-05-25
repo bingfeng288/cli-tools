@@ -1,0 +1,12 @@
+{
+  "name": "mdanchor",
+  "version": "1.0.0",
+  "description": "Markdown anchor link generator CLI",
+  "type": "module",
+  "main": "mdanchor.js",
+  "bin": {
+    "mdanchor": "./mdanchor.js"
+  },
+  "keywords": ["markdown", "anchor", "toc", "link"],
+  "license": "ISC"
+}

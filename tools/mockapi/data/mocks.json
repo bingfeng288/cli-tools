@@ -1,0 +1,16 @@
+[
+  {
+    "id": "mpajv2quursksz",
+    "method": "GET",
+    "path": "/api/users",
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"users\":[{\"id\":1,\"name\":\"Alice\"},{\"id\":2,\"name\":\"Bob\"}]}",
+    "delay": 0,
+    "enabled": true,
+    "description": "List all users",
+    "createdAt": "2026-05-18T01:53:12.870Z"
+  }
+]

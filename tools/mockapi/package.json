@@ -1,0 +1,13 @@
+{
+  "name": "mockapi",
+  "version": "1.0.0",
+  "description": "Local API mock server",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["api", "mock", "testing", "development"],
+  "license": "ISC"
+}

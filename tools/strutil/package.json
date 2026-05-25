@@ -1,0 +1,12 @@
+{
+  "name": "strutil",
+  "version": "1.0.0",
+  "description": "String utilities CLI tool",
+  "type": "module",
+  "main": "strutil.js",
+  "bin": {
+    "strutil": "./strutil.js"
+  },
+  "keywords": ["string", "text", "utilities", "convert", "case"],
+  "license": "ISC"
+}

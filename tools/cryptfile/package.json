@@ -1,0 +1,12 @@
+{
+  "name": "cryptfile",
+  "version": "1.0.0",
+  "description": "File encryption/decryption CLI tool using AES-256-GCM",
+  "type": "module",
+  "main": "cryptfile.js",
+  "bin": {
+    "cryptfile": "./cryptfile.js"
+  },
+  "keywords": ["encrypt", "decrypt", "file", "security", "aes"],
+  "license": "ISC"
+}

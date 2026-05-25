@@ -1,0 +1,12 @@
+{
+  "name": "colorpick",
+  "version": "1.0.0",
+  "description": "Color picker and converter CLI tool",
+  "type": "module",
+  "main": "colorpick.js",
+  "bin": {
+    "colorpick": "./colorpick.js"
+  },
+  "keywords": ["color", "converter", "picker", "hex", "rgb", "hsl"],
+  "license": "ISC"
+}

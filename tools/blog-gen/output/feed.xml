@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>My Blog</title>
+  <link>https://example.com</link>
+  <description>A personal blog</description>
+  <language>en</language>
+  
+    <item>
+      <title>Getting Started with Node.js</title>
+      <link>https://example.com/2024-01-20-getting-started-with-nodejs.html</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 GMT</pubDate>
+      <description>A beginner's guide to Node.js</description>
+    </item>
+  
+    <item>
+      <title>Hello World</title>
+      <link>https://example.com/2024-01-15-hello-world.html</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+      <description>My first blog post</description>
+    </item>
+  
+</channel>
+</rss>

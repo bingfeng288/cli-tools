@@ -1,0 +1,16 @@
+{
+  "name": "devkit",
+  "version": "1.0.0",
+  "description": "Developer CLI toolkit - useful utilities in one place",
+  "type": "module",
+  "bin": {
+    "devkit": "./src/cli.js"
+  },
+  "scripts": {
+    "link": "npm link"
+  },
+  "keywords": ["cli", "developer", "tools", "utilities"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1"
+}

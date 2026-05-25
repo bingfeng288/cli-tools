@@ -1,0 +1,15 @@
+{
+  "name": "csvtool",
+  "version": "1.0.0",
+  "description": "CSV data processor",
+  "type": "module",
+  "main": "csvtool.js",
+  "bin": {
+    "csvtool": "./csvtool.js"
+  },
+  "scripts": {
+    "run": "node csvtool.js"
+  },
+  "keywords": ["csv", "data", "processor"],
+  "license": "ISC"
+}

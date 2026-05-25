@@ -1,0 +1,16 @@
+{
+  "name": "resume-gen",
+  "version": "1.0.0",
+  "description": "Generate beautiful resumes from JSON data",
+  "type": "module",
+  "main": "generate.js",
+  "bin": {
+    "resume-gen": "./generate.js"
+  },
+  "scripts": {
+    "generate": "node generate.js",
+    "preview": "node generate.js && open output/resume.html"
+  },
+  "keywords": ["resume", "cv", "generator", "html"],
+  "license": "ISC"
+}

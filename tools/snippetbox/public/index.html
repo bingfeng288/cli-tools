@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnippetBox</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="logo">📋 SnippetBox</span>
+    </div>
+
+    <div class="sidebar-search">
+      <input type="text" id="searchInput" placeholder="Search snippets..." />
+    </div>
+
+    <button class="btn btn-primary btn-full" id="newSnippetBtn">+ New Snippet</button>
+
+    <div class="sidebar-section">
+      <div class="section-title">Languages</div>
+      <div class="filter-list" id="languageFilters"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title">Tags</div>
+      <div class="tag-cloud" id="tagCloud"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title">Stats</div>
+      <div class="stats-mini" id="statsMini"></div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Snippet list view -->
+    <div class="snippets-view" id="snippetsView">
+      <div class="view-header">
+        <h2 id="viewTitle">All Snippets</h2>
+        <div class="view-controls">
+          <select id="sortSelect">
+            <option value="updated">Recently Updated</option>
+            <option value="created">Recently Created</option>
+            <option value="title">Title A-Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="snippets-grid" id="snippetsGrid"></div>
+    </div>
+
+    <!-- Single snippet view -->
+    <div class="snippet-detail" id="snippetDetail" style="display:none">
+      <div class="detail-header">
+        <div class="detail-title-row">
+          <h2 id="detailTitle"></h2>
+          <div class="detail-actions">
+            <button class="btn btn-ghost btn-sm" id="editSnippetBtn">Edit</button>
+            <button class="btn btn-ghost btn-sm" id="copySnippetBtn">Copy</button>
+            <button class="btn btn-ghost btn-sm btn-danger" id="deleteSnippetBtn">Delete</button>
+            <button class="btn btn-ghost btn-sm" id="backToList">← Back</button>
+          </div>
+        </div>
+        <div class="detail-meta">
+          <span class="lang-badge" id="detailLang"></span>
+          <span id="detailDate"></span>
+        </div>
+        <div class="detail-tags" id="detailTags"></div>
+        <p class="detail-desc" id="detailDesc"></p>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <span id="codeLang"></span>
+          <button class="btn-icon copy-btn" onclick="copyCode()" title="Copy code">📋</button>
+        </div>
+        <pre><code id="detailCode"></code></pre>
+      </div>
+    </div>
+  </main>
+
+  <!-- Editor Modal -->
+  <div class="modal-overlay" id="editorModal">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3 id="editorTitle">New Snippet</h3>
+        <button class="btn-icon" id="closeEditor">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label>Title</label>
+            <input type="text" id="snippetTitle" placeholder="Snippet name" />
+          </div>
+          <div class="form-group">
+            <label>Language</label>
+            <select id="snippetLang">
+              <option value="javascript">JavaScript</option>
+              <option value="typescript">TypeScript</option>
+              <option value="python">Python</option>
+              <option value="rust">Rust</option>
+              <option value="go">Go</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="csharp">C#</option>
+              <option value="ruby">Ruby</option>
+              <option value="php">PHP</option>
+              <option value="swift">Swift</option>
+              <option value="kotlin">Kotlin</option>
+              <option value="sql">SQL</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="shell">Shell</option>
+              <option value="bash">Bash</option>
+              <option value="json">JSON</option>
+              <option value="yaml">YAML</option>
+              <option value="markdown">Markdown</option>
+              <option value="dockerfile">Dockerfile</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" id="snippetDesc" placeholder="What does this snippet do?" />
+        </div>
+        <div class="form-group">
+          <label>Tags (comma separated)</label>
+          <input type="text" id="snippetTags" placeholder="react, hooks, utility" />
+        </div>
+        <div class="form-group">
+          <label>Code</label>
+          <textarea id="snippetCode" placeholder="Paste your code here..." rows="15"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" id="cancelEditor">Cancel</button>
+        <button class="btn btn-primary" id="saveSnippet">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

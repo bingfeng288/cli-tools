@@ -1,0 +1,12 @@
+{
+  "name": "regexr",
+  "version": "1.0.0",
+  "description": "Regex testing and exploration CLI tool",
+  "type": "module",
+  "main": "regexr.js",
+  "bin": {
+    "regexr": "./regexr.js"
+  },
+  "keywords": ["regex", "regular expression", "pattern", "test"],
+  "license": "ISC"
+}

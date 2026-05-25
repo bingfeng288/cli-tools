@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkWiki</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="/" class="logo">📖 MarkWiki</a>
+      <button class="btn-icon" id="sidebarToggle" title="Toggle sidebar">☰</button>
+    </div>
+
+    <div class="sidebar-search">
+      <input type="text" id="searchInput" placeholder="Search pages..." />
+    </div>
+
+    <div class="sidebar-actions">
+      <button class="btn btn-sm btn-primary" id="newPageBtn">+ New Page</button>
+    </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+      <!-- Tree will be rendered here -->
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main" id="main">
+    <!-- Welcome screen -->
+    <div class="welcome" id="welcomeScreen">
+      <div class="welcome-icon">📖</div>
+      <h1>MarkWiki</h1>
+      <p>A local markdown knowledge base. Create and organize your notes with wiki-links.</p>
+      <div class="welcome-actions">
+        <button class="btn btn-primary" onclick="createNewPage()">Create your first page</button>
+      </div>
+      <div class="welcome-features">
+        <div class="feature">
+          <span>📝</span>
+          <h3>Markdown</h3>
+          <p>Write in markdown, read beautiful pages</p>
+        </div>
+        <div class="feature">
+          <span>🔗</span>
+          <h3>Wiki Links</h3>
+          <p>Connect pages with [[wiki links]]</p>
+        </div>
+        <div class="feature">
+          <span>🔍</span>
+          <h3>Search</h3>
+          <p>Full-text search across all pages</p>
+        </div>
+        <div class="feature">
+          <span>📂</span>
+          <h3>Folders</h3>
+          <p>Organize with nested folders</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page view -->
+    <div class="page-view" id="pageView" style="display:none">
+      <div class="page-header">
+        <div class="page-breadcrumb" id="breadcrumb"></div>
+        <div class="page-actions">
+          <button class="btn btn-sm btn-ghost" id="editBtn">Edit</button>
+          <button class="btn btn-sm btn-ghost btn-danger" id="deleteBtn">Delete</button>
+        </div>
+      </div>
+      <article class="page-content" id="pageContent">
+        <!-- Rendered markdown here -->
+      </article>
+    </div>
+
+    <!-- Editor -->
+    <div class="editor" id="editor" style="display:none">
+      <div class="editor-header">
+        <input type="text" id="editorTitle" class="editor-title" placeholder="Page title..." />
+        <div class="editor-actions">
+          <button class="btn btn-ghost" id="cancelEdit">Cancel</button>
+          <button class="btn btn-primary" id="saveBtn">Save</button>
+        </div>
+      </div>
+      <div class="editor-toolbar">
+        <button class="toolbar-btn" title="Bold" onclick="insertMd('**','**')"><b>B</b></button>
+        <button class="toolbar-btn" title="Italic" onclick="insertMd('*','*')"><i>I</i></button>
+        <button class="toolbar-btn" title="Code" onclick="insertMd('`','`')"><code>&lt;/&gt;</code></button>
+        <button class="toolbar-btn" title="Link" onclick="insertMd('[','](url)')">🔗</button>
+        <button class="toolbar-btn" title="Wiki Link" onclick="insertMd('[[',']]')">⟦⟧</button>
+        <button class="toolbar-btn" title="Heading" onclick="insertMd('\\n## ','')">H</button>
+        <button class="toolbar-btn" title="List" onclick="insertMd('\\n- ','')">•</button>
+        <button class="toolbar-btn" title="Code Block" onclick="insertMd('\\n```\\n','\\n```\\n')">{}</button>
+      </div>
+      <textarea id="editorContent" class="editor-textarea" placeholder="Write your content in markdown..."></textarea>
+      <div class="editor-status">
+        <span id="editorStatus">Ready</span>
+        <span id="editorLines">0 lines</span>
+      </div>
+    </div>
+
+    <!-- Search results -->
+    <div class="search-results" id="searchResults" style="display:none">
+      <h2 id="searchResultsTitle">Search Results</h2>
+      <div id="searchResultsList"></div>
+    </div>
+  </main>
+
+  <!-- New page modal -->
+  <div class="modal-overlay" id="newPageModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>New Page</h3>
+        <button class="btn-icon" onclick="document.getElementById('newPageModal').classList.remove('open')">✕</button>
+      </div>
+      <div class="modal-body">
+        <label>Path (e.g. notes/my-page or guides/setup)</label>
+        <input type="text" id="newPagePath" placeholder="page-name" />
+        <label>Template</label>
+        <select id="newPageTemplate">
+          <option value="blank">Blank</option>
+          <option value="notes">Meeting Notes</option>
+          <option value="journal">Journal Entry</option>
+          <option value="project">Project Page</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="document.getElementById('newPageModal').classList.remove('open')">Cancel</button>
+        <button class="btn btn-primary" id="createPageBtn">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

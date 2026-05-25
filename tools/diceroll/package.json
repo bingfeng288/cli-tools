@@ -1,0 +1,12 @@
+{
+  "name": "diceroll",
+  "version": "1.0.0",
+  "description": "Dice roller CLI tool",
+  "type": "module",
+  "main": "diceroll.js",
+  "bin": {
+    "diceroll": "./diceroll.js"
+  },
+  "keywords": ["dice", "roller", "random", "rpg"],
+  "license": "ISC"
+}

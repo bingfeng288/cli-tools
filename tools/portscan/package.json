@@ -1,0 +1,12 @@
+{
+  "name": "portscan",
+  "version": "1.0.0",
+  "description": "Port scanner CLI tool",
+  "type": "module",
+  "main": "portscan.js",
+  "bin": {
+    "portscan": "./portscan.js"
+  },
+  "keywords": ["port", "scanner", "network", "tcp"],
+  "license": "ISC"
+}

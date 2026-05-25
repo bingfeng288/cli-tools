@@ -1,0 +1,12 @@
+{
+  "name": "mdtable",
+  "version": "1.0.0",
+  "description": "Markdown table generator CLI",
+  "type": "module",
+  "main": "mdtable.js",
+  "bin": {
+    "mdtable": "./mdtable.js"
+  },
+  "keywords": ["markdown", "table", "generator", "csv", "json"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "taskdo",
+  "version": "1.0.0",
+  "description": "CLI todo/task manager",
+  "type": "module",
+  "main": "taskdo.js",
+  "bin": {
+    "taskdo": "./taskdo.js"
+  },
+  "keywords": ["todo", "task", "manager", "cli"],
+  "license": "ISC"
+}

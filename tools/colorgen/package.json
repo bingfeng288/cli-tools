@@ -1,0 +1,15 @@
+{
+  "name": "colorgen",
+  "version": "1.0.0",
+  "description": "Color palette generator",
+  "type": "module",
+  "main": "colorgen.js",
+  "bin": {
+    "colorgen": "./colorgen.js"
+  },
+  "scripts": {
+    "gen": "node colorgen.js"
+  },
+  "keywords": ["color", "palette", "design"],
+  "license": "ISC"
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MockAPI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <span class="logo">🔌 MockAPI</span>
+      <span class="subtitle">Local API Mock Server</span>
+    </div>
+    <div class="header-right">
+      <span class="port-info">Mock server: <code>localhost:3462</code></span>
+      <button class="btn btn-primary" id="newMockBtn">+ New Mock</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-value" id="statTotal">0</div>
+        <div class="stat-label">Total Mocks</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="statEnabled">0</div>
+        <div class="stat-label">Enabled</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="statRequests">0</div>
+        <div class="stat-label">Recent Requests</div>
+      </div>
+    </div>
+
+    <!-- Mocks List -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Mocks</h3>
+        <div class="card-actions">
+          <button class="btn btn-sm btn-ghost" id="importBtn">Import</button>
+          <button class="btn btn-sm btn-ghost" id="exportBtn">Export</button>
+        </div>
+      </div>
+      <div class="mocks-list" id="mocksList"></div>
+    </div>
+
+    <!-- Request Log -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Request Log</h3>
+        <button class="btn btn-sm btn-ghost" id="refreshLogs">Refresh</button>
+      </div>
+      <div class="log-list" id="logList"></div>
+    </div>
+  </main>
+
+  <!-- Mock Editor Modal -->
+  <div class="modal-overlay" id="mockModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="mockModalTitle">New Mock</h3>
+        <button class="btn-icon" id="closeMockModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Method</label>
+            <select id="mockMethod">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+              <option value="PATCH">PATCH</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </div>
+          <div class="form-group flex-1">
+            <label>Path</label>
+            <input type="text" id="mockPath" placeholder="/api/users" />
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <input type="number" id="mockStatus" value="200" min="100" max="599" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" id="mockDesc" placeholder="What does this mock do?" />
+        </div>
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label>Delay (ms)</label>
+            <input type="number" id="mockDelay" value="0" min="0" />
+          </div>
+          <div class="form-group">
+            <label>Enabled</label>
+            <select id="mockEnabled">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Response Body (JSON)</label>
+          <textarea id="mockBody" rows="8" placeholder='{"message": "Hello"}'></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" id="cancelMock">Cancel</button>
+        <button class="btn btn-primary" id="saveMock">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Modal -->
+  <div class="modal-overlay" id="importModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Import Mocks</h3>
+        <button class="btn-icon" onclick="document.getElementById('importModal').classList.remove('open')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-dim);font-size:13px;margin-bottom:12px">Paste a JSON array of mock definitions:</p>
+        <textarea id="importData" rows="10" placeholder='[{"method":"GET","path":"/api/users","body":{"users":[]}}]'></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="document.getElementById('importModal').classList.remove('open')">Cancel</button>
+        <button class="btn btn-primary" id="doImport">Import</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "md2html",
+  "version": "1.0.0",
+  "description": "Convert markdown to HTML with themes",
+  "type": "module",
+  "main": "md2html.js",
+  "bin": {
+    "md2html": "./md2html.js"
+  },
+  "scripts": {
+    "convert": "node md2html.js"
+  },
+  "keywords": ["markdown", "html", "converter"],
+  "license": "ISC"
+}

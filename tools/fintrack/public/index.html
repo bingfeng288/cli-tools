@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinTrack</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <span class="logo">💰 FinTrack</span>
+      <span class="month-nav">
+        <button class="btn-icon" id="prevMonth">◀</button>
+        <span id="currentMonth">2026-05</span>
+        <button class="btn-icon" id="nextMonth">▶</button>
+      </span>
+    </div>
+    <div class="header-right">
+      <button class="btn btn-primary" id="addTransactionBtn">+ Add Transaction</button>
+    </div>
+  </header>
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="summary-card income">
+        <div class="summary-label">Income</div>
+        <div class="summary-value" id="totalIncome">¥0</div>
+        <div class="summary-change" id="incomeChange"></div>
+      </div>
+      <div class="summary-card expense">
+        <div class="summary-label">Expense</div>
+        <div class="summary-value" id="totalExpense">¥0</div>
+        <div class="summary-change" id="expenseChange"></div>
+      </div>
+      <div class="summary-card balance">
+        <div class="summary-label">Balance</div>
+        <div class="summary-value" id="totalBalance">¥0</div>
+        <div class="summary-count" id="txCount">0 transactions</div>
+      </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="charts-row">
+      <!-- Category Breakdown -->
+      <div class="card chart-card">
+        <h3>Expense by Category</h3>
+        <div class="chart-container">
+          <canvas id="categoryChart" width="300" height="300"></canvas>
+        </div>
+        <div class="chart-legend" id="categoryLegend"></div>
+      </div>
+
+      <!-- Monthly Trend -->
+      <div class="card chart-card">
+        <h3>6-Month Trend</h3>
+        <div class="chart-container">
+          <canvas id="trendChart" width="500" height="300"></canvas>
+        </div>
+      </div>
+
+      <!-- Daily Expenses -->
+      <div class="card chart-card">
+        <h3>Daily Expenses</h3>
+        <div class="chart-container">
+          <canvas id="dailyChart" width="500" height="250"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transactions List -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Transactions</h3>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="expense">Expense</button>
+          <button class="filter-btn" data-filter="income">Income</button>
+        </div>
+      </div>
+      <div class="transactions-list" id="transactionsList"></div>
+    </div>
+
+    <!-- Budget -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Budget</h3>
+        <button class="btn btn-sm btn-ghost" id="setBudgetBtn">Set Budget</button>
+      </div>
+      <div class="budget-list" id="budgetList"></div>
+    </div>
+  </main>
+
+  <!-- Add Transaction Modal -->
+  <div class="modal-overlay" id="transactionModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Add Transaction</h3>
+        <button class="btn-icon" id="closeModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="type-toggle">
+          <button class="type-btn active" data-type="expense">Expense</button>
+          <button class="type-btn" data-type="income">Income</button>
+        </div>
+        <div class="form-group">
+          <label>Amount</label>
+          <input type="number" id="txAmount" placeholder="0.00" step="0.01" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select id="txCategory">
+            <optgroup label="Expense" id="expenseCategories">
+              <option value="food">Food & Dining</option>
+              <option value="transport">Transport</option>
+              <option value="shopping">Shopping</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="bills">Bills & Utilities</option>
+              <option value="health">Health</option>
+              <option value="education">Education</option>
+              <option value="other">Other</option>
+            </optgroup>
+            <optgroup label="Income" id="incomeCategories">
+              <option value="salary">Salary</option>
+              <option value="freelance">Freelance</option>
+              <option value="investment">Investment</option>
+              <option value="gift">Gift</option>
+              <option value="other_income">Other</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" id="txDescription" placeholder="What was this for?" />
+        </div>
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="txDate" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" id="cancelTx">Cancel</button>
+        <button class="btn btn-primary" id="saveTx">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Budget Modal -->
+  <div class="modal-overlay" id="budgetModal">
+    <div class="modal modal-sm">
+      <div class="modal-header">
+        <h3>Set Budget</h3>
+        <button class="btn-icon" onclick="document.getElementById('budgetModal').classList.remove('open')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Category</label>
+          <select id="budgetCategory">
+            <option value="food">Food & Dining</option>
+            <option value="transport">Transport</option>
+            <option value="shopping">Shopping</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="bills">Bills & Utilities</option>
+            <option value="health">Health</option>
+            <option value="education">Education</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Budget Amount</label>
+          <input type="number" id="budgetAmount" placeholder="0.00" step="0.01" min="0" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="document.getElementById('budgetModal').classList.remove('open')">Cancel</button>
+        <button class="btn btn-primary" id="saveBudget">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

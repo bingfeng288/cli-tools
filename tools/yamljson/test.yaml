@@ -1,0 +1,20 @@
+name: Test Project
+version: 1.0.0
+description: A test configuration
+
+settings:
+  debug: true
+  port: 3000
+  host: localhost
+
+database:
+  type: postgres
+  host: db.example.com
+  port: 5432
+  name: mydb
+
+features:
+  - authentication
+  - logging
+  - caching
+

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mpajkcst5rqxr8",
+    "title": "Rust error handling",
+    "description": "Custom error type with thiserror",
+    "code": "use thiserror::Error;\n\n#[derive(Error, Debug)]\npub enum AppError {\n    #[error(\"Database error: {0}\")]\n    Database(#[from] sqlx::Error),\n    #[error(\"Not found\")]\n    NotFound,\n    #[error(\"Unauthorized\")]\n    Unauthorized,\n}",
+    "language": "rust",
+    "tags": [
+      "rust",
+      "error-handling",
+      "thiserror"
+    ],
+    "pinned": false,
+    "createdAt": "2026-05-18T01:44:52.685Z",
+    "updatedAt": "2026-05-18T01:44:52.685Z"
+  },
+  {
+    "id": "mpajkcsmwude3n",
+    "title": "Python FastAPI endpoint",
+    "description": "Basic FastAPI GET endpoint with path parameter",
+    "code": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int, q: str = None):\n    return {\"item_id\": item_id, \"q\": q}",
+    "language": "python",
+    "tags": [
+      "python",
+      "fastapi",
+      "api"
+    ],
+    "pinned": false,
+    "createdAt": "2026-05-18T01:44:52.678Z",
+    "updatedAt": "2026-05-18T01:44:52.678Z"
+  },
+  {
+    "id": "mpajkcseo8vd4x",
+    "title": "React useDebounce Hook",
+    "description": "A custom hook that debounces a value",
+    "code": "import { useState, useEffect } from \"react\";\n\nexport function useDebounce(value, delay = 300) {\n  const [debounced, setDebounced] = useState(value);\n\n  useEffect(() => {\n    const timer = setTimeout(() => setDebounced(value), delay);\n    return () => clearTimeout(timer);\n  }, [value, delay]);\n\n  return debounced;\n}",
+    "language": "javascript",
+    "tags": [
+      "react",
+      "hooks",
+      "debounce"
+    ],
+    "pinned": false,
+    "createdAt": "2026-05-18T01:44:52.670Z",
+    "updatedAt": "2026-05-18T01:44:52.670Z"
+  }
+]

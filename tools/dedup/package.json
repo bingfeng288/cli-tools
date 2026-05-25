@@ -1,0 +1,16 @@
+{
+  "name": "dedup",
+  "version": "1.0.0",
+  "description": "Find and remove duplicate files",
+  "type": "module",
+  "main": "dedup.js",
+  "bin": {
+    "dedup": "./dedup.js"
+  },
+  "scripts": {
+    "scan": "node dedup.js scan",
+    "report": "node dedup.js report"
+  },
+  "keywords": ["files", "dedup", "duplicate", "cleanup"],
+  "license": "ISC"
+}

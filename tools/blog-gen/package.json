@@ -1,0 +1,16 @@
+{
+  "name": "blog-gen",
+  "version": "1.0.0",
+  "description": "Static blog generator from markdown",
+  "type": "module",
+  "main": "generate.js",
+  "bin": {
+    "blog-gen": "./generate.js"
+  },
+  "scripts": {
+    "generate": "node generate.js",
+    "serve": "node serve.js"
+  },
+  "keywords": ["blog", "static", "generator", "markdown"],
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "diffview",
+  "version": "1.0.0",
+  "description": "CLI diff viewer with colorized output",
+  "type": "module",
+  "main": "diffview.js",
+  "bin": {
+    "diffview": "./diffview.js"
+  },
+  "keywords": ["diff", "compare", "viewer", "cli"],
+  "license": "ISC"
+}

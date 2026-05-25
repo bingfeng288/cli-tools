@@ -1,0 +1,83 @@
+{
+  "basics": {
+    "name": "Alex Chen",
+    "title": "Senior Software Engineer",
+    "email": "alex@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "website": "https://alexchen.dev",
+    "github": "github.com/alexchen",
+    "linkedin": "linkedin.com/in/alexchen",
+    "summary": "Passionate software engineer with 8+ years of experience building scalable web applications. Expert in TypeScript, React, and Node.js. Strong focus on code quality, performance, and developer experience."
+  },
+  "experience": [
+    {
+      "company": "TechCorp",
+      "title": "Senior Software Engineer",
+      "location": "San Francisco, CA",
+      "period": "2022 - Present",
+      "highlights": [
+        "Led the migration of a monolithic application to microservices, reducing deployment time by 70%",
+        "Designed and implemented a real-time data pipeline processing 1M+ events/day",
+        "Mentored 5 junior engineers and established code review best practices",
+        "Improved application performance by 40% through caching and query optimization"
+      ]
+    },
+    {
+      "company": "StartupXYZ",
+      "title": "Full Stack Developer",
+      "location": "Remote",
+      "period": "2019 - 2022",
+      "highlights": [
+        "Built the core product from scratch using React, Node.js, and PostgreSQL",
+        "Implemented CI/CD pipeline that reduced deployment failures by 90%",
+        "Developed a custom analytics dashboard used by 500+ customers",
+        "Scaled the application from 100 to 50,000 daily active users"
+      ]
+    },
+    {
+      "company": "WebAgency",
+      "title": "Frontend Developer",
+      "location": "New York, NY",
+      "period": "2017 - 2019",
+      "highlights": [
+        "Delivered 20+ client projects on time and within budget",
+        "Created a reusable component library used across 15 projects",
+        "Improved website performance scores from 40 to 95+ on Lighthouse"
+      ]
+    }
+  ],
+  "skills": [
+    { "category": "Languages", "items": ["TypeScript", "JavaScript", "Python", "Rust", "Go"] },
+    { "category": "Frontend", "items": ["React", "Next.js", "Vue.js", "Tailwind CSS", "HTML/CSS"] },
+    { "category": "Backend", "items": ["Node.js", "Express", "FastAPI", "PostgreSQL", "Redis"] },
+    { "category": "DevOps", "items": ["Docker", "Kubernetes", "AWS", "GitHub Actions", "Terraform"] }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "B.S. Computer Science",
+      "period": "2013 - 2017",
+      "gpa": "3.8/4.0"
+    }
+  ],
+  "projects": [
+    {
+      "name": "DevFlow",
+      "description": "Open-source developer productivity tool with 2k+ GitHub stars",
+      "tech": ["TypeScript", "React", "Electron"],
+      "url": "github.com/alexchen/devflow"
+    },
+    {
+      "name": "CloudSync",
+      "description": "Real-time file synchronization service for distributed teams",
+      "tech": ["Go", "gRPC", "Redis"],
+      "url": "github.com/alexchen/cloudsync"
+    }
+  ],
+  "certifications": [
+    "AWS Solutions Architect Professional",
+    "Google Cloud Professional Developer",
+    "Kubernetes Administrator (CKA)"
+  ]
+}

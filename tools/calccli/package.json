@@ -1,0 +1,12 @@
+{
+  "name": "calccli",
+  "version": "1.0.0",
+  "description": "CLI calculator with scientific functions",
+  "type": "module",
+  "main": "calccli.js",
+  "bin": {
+    "calccli": "./calccli.js"
+  },
+  "keywords": ["calculator", "math", "cli", "scientific"],
+  "license": "ISC"
+}

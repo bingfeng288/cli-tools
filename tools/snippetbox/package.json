@@ -1,0 +1,13 @@
+{
+  "name": "snippetbox",
+  "version": "1.0.0",
+  "description": "Code snippet manager",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["snippets", "code", "manager"],
+  "license": "ISC"
+}
